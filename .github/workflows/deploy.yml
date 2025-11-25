@@ -9,10 +9,8 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v4
-      - name: Load & scashe dependencies
+      - name: Load & cashe dependencies
         uses: ./.github/actions/cached-deps
-        with:
-          caching: 'false'
       - name: Lint code
         run: npm run lint
   test:
